@@ -16,4 +16,4 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build -f Dockerfile . -t costavictor/nlw-journey-devops:latest
+          docker build -t costavictor/nlw-journey-devops:latest app-journey -f app-journey/Dockerfile 
