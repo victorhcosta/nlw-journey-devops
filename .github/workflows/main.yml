@@ -10,8 +10,6 @@ jobs:
     name: Build and push
     runs-on: ubuntu-latest
 
-    working-directory: ./app-journey
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
