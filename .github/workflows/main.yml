@@ -26,6 +26,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build docker image
-        run: |
-          docker build -t costavictor/nlw-journey-devops:${{ steps.generate_sha.outputs.sha }} app-journey -f app-journey/Dockerfile
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          tags: |
+            costavictor/nlw-journey-devops:${{ steps.generate_sha.outputs.sha }}
+            costavictor/nlw-journey-devops:latest
