@@ -21,8 +21,8 @@ jobs:
 
       - name: Run tests
         run: |
-        cd app-journey
-        go test
+          cd app-journey
+          go test
 
       - name: Generate SHA
         id: generate_sha
